@@ -1,10 +1,12 @@
 import os
 import requests  # conda or pip install requests #to sent GET requests on google
-from bs4 import BeautifulSoup
-# conda or pip install bs4 #to parse html(getting data out from html, xml or other markup languages)
+from bs4 import BeautifulSoup # conda or pip install bs4 #to parse html(getting data out from html, xml or other markup languages)
 
-# user can input a search keyword and the count of images required
-# download images from google search image
+"""
+user can input a search keyword and the count of images required
+download images from google search image
+"""
+
 Google_Image = 'https://www.google.com/search?site=&tbm=isch&source=hp&biw=1873&bih=990&'
 
 """
@@ -31,7 +33,6 @@ def main():
     if not os.path.exists(Image_Folder):
         os.mkdir(Image_Folder)
     download_images()
-
 
 def download_images():
     # Creating a list of our search keywords
